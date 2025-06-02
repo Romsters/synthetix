@@ -24,7 +24,8 @@
 		"test:etherscan": "node test/etherscan",
 		"test:publish": "concurrently --kill-others --success first \"anvil --prune-history > /dev/null\" \"wait-port 127.0.0.1:8545 && mocha test/publish --bail --timeout 600000\"",
 		"test:integration:l1": "hardhat test:integration:l1 --compile --deploy",
-		"test:integration:l2": "hardhat test:integration:l2 --compile --deploy"
+		"test:integration:l2": "hardhat test:integration:l2 --compile --deploy",
+		"test:prepare": "hardhat run scripts/fund-test-accounts.js"
 	},
 	"husky": {
 		"hooks": {

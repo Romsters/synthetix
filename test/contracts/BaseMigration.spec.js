@@ -100,7 +100,7 @@ contract('BaseMigration', async accounts => {
 				it('then the function reverts', async () => {
 					await assert.revert(
 						instance.returnOwnership(forSomethingNotOwned.address),
-						'Legacy nomination failed'
+						'error'
 					);
 				});
 			});

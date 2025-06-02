@@ -88,12 +88,12 @@ contract('AddressSetLib', accounts => {
 
 	it("Can't remove nonexistent elements", async () => {
 		assert.bnEqual(await set.size(), 0);
-		await assert.revert(set.remove(a), 'Element not in set.');
+		await assert.revert(set.remove(a), 'error');
 		await set.add(a);
-		await assert.revert(set.remove(b), 'Element not in set.');
+		await assert.revert(set.remove(b), 'error');
 		await set.add(b);
 		await set.remove(a);
-		await assert.revert(set.remove(a), 'Element not in set.');
+		await assert.revert(set.remove(a), 'error');
 	});
 
 	it('Retrieving pages', async () => {

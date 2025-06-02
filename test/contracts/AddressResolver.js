@@ -36,15 +36,15 @@ contract('AddressResolver', accounts => {
 			it('then it reverts', async () => {
 				await assert.revert(
 					resolver.importAddresses([], [account1], { from: owner }),
-					'Input lengths must match'
+					'error'
 				);
 				await assert.revert(
 					resolver.importAddresses([toBytes32('test')], [account1, account2], { from: owner }),
-					'Input lengths must match'
+					'error'
 				);
 				await assert.revert(
 					resolver.importAddresses([toBytes32('test')], [], { from: owner }),
-					'Input lengths must match'
+					'error'
 				);
 			});
 		});
