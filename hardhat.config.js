@@ -47,7 +47,7 @@ module.exports = {
 		file: AST_FILENAME,
 		ignores: 'test-helpers',
 	},
-	defaultNetwork: 'bojuumos',
+	defaultNetwork: 'boojumos',
 	networks: {
 		hardhat: {
 			blockGasLimit: 12e6,
@@ -70,7 +70,7 @@ module.exports = {
 				"0x509ca2e9e6acf0ba086477910950125e698d4ea70fa6f63e000c5a22bda9361c",
 			],
 		},
-		bojuumos: {
+		boojumos: {
 			gas: 12e6,
 			blockGasLimit: 12e6,
 			allowUnlimitedContractSize: true,
